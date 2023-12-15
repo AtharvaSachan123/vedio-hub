@@ -26,7 +26,7 @@ const Header = () => {
         p={'0'}
         w={'10'}
         h={'10'}
-        borderRadius={'full'}
+       
         onClick={onOpen}
       >
         <BiMenuAltLeft size={'20'} />
@@ -39,25 +39,25 @@ const Header = () => {
             <DrawerHeader>VEDIO HUB</DrawerHeader>
             <DrawerBody>
                 <VStack alignItems={'flex-start'}>
-                    <Button variant={"ghost"}  colorScheme={'purple'}>
+                    <Button onClick={onClose}    variant={"ghost"}  colorScheme={'purple'}>
                         <Link to={'/'}>Home</Link>
                     </Button>
-                    <Button variant={"ghost"}  colorScheme={'purple'}>
+                    <Button onClick={onClose}  variant={"ghost"}  colorScheme={'purple'}>
                         <Link to={'/vedios'}>Vedios</Link>
                     </Button>
-                    <Button variant={"ghost"}  colorScheme={'purple'}>
+                    <Button onClick={onClose}  variant={"ghost"}  colorScheme={'purple'}>
                         <Link to={'/vedios?category=free'}>Free Vedios</Link>
                     </Button>
-                    <Button variant={"ghost"}  colorScheme={'purple'}>
+                    <Button onClick={onClose}  variant={"ghost"}  colorScheme={'purple'}>
                         <Link to={'/upload'}>Upload Vedio</Link>
                     </Button>
                 </VStack>
                 <HStack pos={'absolute'} bottom={'10'} left={0} w={'full'} justifyContent={'space-evenly'}>
-                    <Button colorScheme={'purple'} variant={'outline'}>
-                        <Link >Log In</Link>
+                    <Button  colorScheme={'purple'} variant={'outline'}>
+                        <Link to={'/login'} >Log In</Link>
                     </Button>
                     <Button  colorScheme="purple"  variant={'outline'}>
-                        <Link>SignUP</Link>
+                        <Link to={'/signup'}>SignUP</Link>
                     </Button>
                 </HStack>
             </DrawerBody>
